@@ -1,8 +1,7 @@
 <?php
+
 namespace Users\Form;
-
 use Zend\Form\Form;
-
 class RegisterForm extends Form 
 {
     public function __construct($name = null) 
@@ -40,7 +39,8 @@ class RegisterForm extends Form
                     'name' => 'EmailAddress',
                     'options' => array(
                         'messages' => array(
-                            \Zend\Validator\EmailAddress::INVALID_FORMAT => 'Email address format  is invalid'
+                            \Zend\Validator\
+                            EmailAddress::INVALID_FORMAT => 'Email address format  is invalid'
                         )
                     )
                 )
@@ -51,12 +51,10 @@ class RegisterForm extends Form
            'name' => 'password',
             'attributes' => array(
                 'type' => 'password',
+                'required' => 'required'
             ),
             'options' => array(
                 'label' => 'Password',
-            ),
-            'attributes' => array(
-                'required' => 'required'
             ),
             'filters' => array(
                 array('name' => 'StringTrim'),
@@ -67,12 +65,10 @@ class RegisterForm extends Form
            'name' => 'confirm_password',
             'attributes' => array(
                 'type' => 'password',
+                'required' => 'required'
             ),
             'options' => array(
                 'label' => 'Confirm Password',
-            ),
-            'attributes' => array(
-                'required' => 'required'
             ),
             'filters' => array(
                 array('name' => 'StringTrim'),

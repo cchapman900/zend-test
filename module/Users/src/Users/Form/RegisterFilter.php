@@ -10,11 +10,13 @@ class RegisterFilter extends InputFilter
             'name'      => 'email',
             'required'  => true,
             'validators'=> array(
-                'name'      => 'EmailAddress',
-                'options'   => array(
-                    'domain'    => true,
-                )
-            )
+                array(
+                    'name'      => 'EmailAddress',
+                    'options'   => array(
+                        'domain'    => true,
+                    ),
+                ),
+            ),
         ));
         $this->add(array(
             'name'      => 'name',
